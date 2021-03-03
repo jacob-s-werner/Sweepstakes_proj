@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepstakesApplication
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         private Dictionary<int, Contestant> _contestants;
         private string _name;
