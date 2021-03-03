@@ -8,6 +8,9 @@ namespace SweepstakesApplication
 {
     class Contestant
     {
+        public string FirstName, LastName, EmailAddress;
+        public int RegistrationNumber;
+
 
         public Contestant()
         {
