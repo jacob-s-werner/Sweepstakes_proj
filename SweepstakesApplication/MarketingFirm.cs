@@ -14,5 +14,14 @@ namespace SweepstakesApplication
         {
             _manager = manager;
         }
+        public void CreateSweepstake()
+        {
+            string name = UserInterface.GetUserInputFor("What is the name of your new Sweepstakes?");
+           
+            Sweepstakes sweepstakes = new Sweepstakes(name);
+            _manager.InsertSweepstakes(sweepstakes);
+
+            Console.WriteLine($"Your sweepstakes {name} has been created and added to the manager!");
+        }
     }
 }
