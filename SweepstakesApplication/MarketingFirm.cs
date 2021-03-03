@@ -8,11 +8,11 @@ namespace SweepstakesApplication
 {
     class MarketingFirm
     {
+        private ISweepstakesManager _manager;
 
-
-        public MarketingFirm()
+        public MarketingFirm(ISweepstakesManager manager)
         {
-
+            _manager = manager;
         }
     }
 }
