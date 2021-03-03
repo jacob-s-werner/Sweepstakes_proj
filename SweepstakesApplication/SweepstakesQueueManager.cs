@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepstakesApplication
 {
-    class SweepstakesQueueManager
+    class SweepstakesQueueManager : ISweepstakesManager
     {
         Queue<Sweepstakes> _queue;
 
@@ -17,6 +17,11 @@ namespace SweepstakesApplication
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
             _queue.Enqueue(sweepstakes);
+        }
+        public Sweepstakes GetSweepstakes()
+        {
+            Sweepstakes sweepstakesDequeued = _queue.Dequeue();
+            return sweepstakesDequeued;
         }
     }
 }
