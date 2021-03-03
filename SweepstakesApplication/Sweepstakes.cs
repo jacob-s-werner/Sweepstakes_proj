@@ -8,7 +8,12 @@ namespace SweepstakesApplication
 {
     class Sweepstakes
     {
-
+        private Dictionary<int, Contestant> _contestants;
+        private string _name;
+        public string Name
+        {
+            get => _name;
+        }
 
         public Sweepstakes()
         {
