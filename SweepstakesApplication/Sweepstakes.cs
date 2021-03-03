@@ -15,7 +15,19 @@ namespace SweepstakesApplication
             get => _name;
         }
 
-        public Sweepstakes()
+        public Sweepstakes(string name)
+        {
+            _name = name;
+        }
+        public void RegisterContestant(Contestant contestant)
+        {
+
+        }
+        public void PrintContestantInfo(Contestant contestant)
+        {
+
+        }
+        public Contestant PickWinner()
         {
 
         }
