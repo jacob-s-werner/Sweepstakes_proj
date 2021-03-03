@@ -14,5 +14,9 @@ namespace SweepstakesApplication
         {
 
         }
+        public void CreateMarketingFirmWithManager()
+        {
+            
+        }
     }
 }
