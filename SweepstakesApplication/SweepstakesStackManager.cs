@@ -8,11 +8,15 @@ namespace SweepstakesApplication
 {
     class SweepstakesStackManager
     {
-
+        Stack<Sweepstakes> _stack;
 
         public SweepstakesStackManager()
         {
 
+        }
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+            _stack.Push(sweepstakes);
         }
     }
 }
