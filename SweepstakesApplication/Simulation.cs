@@ -16,7 +16,8 @@ namespace SweepstakesApplication
         }
         public void CreateMarketingFirmWithManager()
         {
-
+            ISweepstakesManager manager = SweepstakesManagerFactory.CreateSweepstakesManager();
+            MarketingFirm marketingFirm = new MarketingFirm(manager);
         }
     }
 }
