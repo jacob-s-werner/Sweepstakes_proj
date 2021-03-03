@@ -21,7 +21,7 @@ namespace SweepstakesApplication
         }
         public void RegisterContestant(Contestant contestant)
         {
-
+            _contestants.Add(contestant.RegistrationNumber,contestant);
         }
         public void PrintContestantInfo(Contestant contestant)
         {
