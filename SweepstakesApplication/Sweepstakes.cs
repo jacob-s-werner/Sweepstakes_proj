@@ -25,7 +25,17 @@ namespace SweepstakesApplication
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            if (_contestants.ContainsKey(contestant.RegistrationNumber))
+            {
+                Console.WriteLine($"------Contestant Information------\n" +
+                    $"Full Name - {_contestants[contestant.RegistrationNumber].FirstName} {_contestants[contestant.RegistrationNumber].LastName}\n" +
+                    $"Registration Number - {_contestants[contestant.RegistrationNumber].RegistrationNumber}\n" +
+                    $"Email Address - {_contestants[contestant.RegistrationNumber].EmailAddress}\n");
+            }
+            else
+            {
+                Console.WriteLine("Contestant not found.");
+            }
         }
         public Contestant PickWinner()
         {
