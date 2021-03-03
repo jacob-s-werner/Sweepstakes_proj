@@ -18,5 +18,10 @@ namespace SweepstakesApplication
         {
             _stack.Push(sweepstakes);
         }
+        public Sweepstakes GetSweepstakes()
+        {
+            Sweepstakes sweepstakesPopped = _stack.Pop();
+            return sweepstakesPopped;
+        }
     }
 }
