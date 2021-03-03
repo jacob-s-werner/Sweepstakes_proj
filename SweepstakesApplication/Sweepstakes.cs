@@ -39,7 +39,22 @@ namespace SweepstakesApplication
         }
         public Contestant PickWinner()
         {
+            Contestant winningContestant = null; //gets rid of assignment error for return
+            Random random = new Random();
+            int winningPosition = random.Next(_contestants.Count);
+            int currentIndex = 0;
 
+            foreach (KeyValuePair<int, Contestant> keyValuePair in _contestants)
+            {
+                if (currentIndex == winningPosition)
+                {
+                    winningContestant = keyValuePair.Value;
+                    break;
+                }
+                currentIndex++;
+            }
+
+            return winningContestant;
         }
     }
 }
