@@ -34,5 +34,9 @@ namespace SweepstakesApplication
         {
             Console.Write($"Contestant {contestant.FirstName} {contestant.LastName} won the Sweepstakes!\n");
         }
+        public void Notify(IContestant contestant, int registrationNumber) 
+        {
+            Console.Write($"Congratulations {contestant.FirstName} {contestant.LastName}, you won the Sweepstakes with registration number {registrationNumber}!\n");
+        }
     }
 }
