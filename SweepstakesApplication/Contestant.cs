@@ -6,15 +6,32 @@ using System.Threading.Tasks;
 
 namespace SweepstakesApplication
 {
-    public class Contestant
+    public class Contestant : IContestant
     {
-        public string FirstName, LastName, EmailAddress;
-        public int RegistrationNumber;
+        private string firstName, lastName, emailAddress;
+        private int registrationNumber;
 
+        public string FirstName
+        {
+            get => firstName;
+            set => firstName = value;
+        }
+        public string LastName
+        {
+            get => lastName;
+            set => lastName = value;
+        }
+        
 
         public Contestant()
         {
 
+        }
+
+
+        public void Notify(IContestant contestant)
+        {
+            Console.Write($"Contestant {contestant.FirstName} {contestant.LastName} won the Sweepstakes!\n");
         }
     }
 }
