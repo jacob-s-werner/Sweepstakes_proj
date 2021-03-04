@@ -29,7 +29,6 @@ namespace SweepstakesApplication
 
         }
 
-
         public void Notify(IContestant contestant)
         {
             Console.Write($"Contestant {contestant.FirstName} {contestant.LastName} won the Sweepstakes!\n");

@@ -53,8 +53,21 @@ namespace SweepstakesApplication
                 }
                 currentIndex++;
             }
+            NotifyAllContestantsOfWinner(winningContestant);
 
             return winningContestant;
+        }
+        public void NotifyAllContestantsOfWinner(Contestant winningContestant)
+        {
+            foreach (KeyValuePair<int, Contestant> keyValuePair in _contestants)
+            {
+
+                keyValuePair.Value.Notify(winningContestant);
+                if (keyValuePair.Key == winningContestant.RegistrationNumber)
+                {
+                     winningContestant.Notify(winningContestant, winningContestant.RegistrationNumber);
+                }
+            }
         }
     }
 }
