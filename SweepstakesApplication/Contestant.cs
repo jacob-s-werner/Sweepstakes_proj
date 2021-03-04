@@ -8,8 +8,9 @@ namespace SweepstakesApplication
 {
     public class Contestant : IContestant
     {
-        private string firstName, lastName, emailAddress;
-        private int registrationNumber;
+        private string firstName, lastName;
+        public string EmailAddress;
+        public int RegistrationNumber;
 
         public string FirstName
         {
